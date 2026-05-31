@@ -1,2 +1,12 @@
-# esp32-breathing-led
-ESP32 呼吸灯 | Arduino PWM控制LED渐亮渐暗，学习占空比与延时对视觉效果的影响
+   # 项目01：ESP32呼吸灯
+   
+   ### 功能
+   使用ESP32 LEDC实现LED呼吸灯效果，模拟人呼吸节奏。
+   
+   ### 技术重点
+   - 使用 `ledcAttach(pin, 5000, 8)` 配置5kHz PWM
+   - 8位分辨率，0-255共256阶亮度
+   - GPIO2为ESP32板载LED，无需外接电路
+   
+   ### 调试心得
+   delay(5)呼吸过快，改为delay(15)后周期约3.8秒，更接近真实呼吸。
